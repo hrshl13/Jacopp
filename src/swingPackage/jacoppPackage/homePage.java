@@ -18,7 +18,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
-import javax.swing.JMenuBar;
 
 public class homePage extends JFrame {
 
@@ -32,7 +31,8 @@ public class homePage extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					new homePage();
+					homePage frame = new homePage();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -58,9 +58,9 @@ public class homePage extends JFrame {
 		
 		JPanel panel1 = new JPanel();
 		tabbedPane.addTab("Home", null, panel1, null);
+		panel1.setLayout(null);
 		
 		JButton paintButton = new JButton("Paint");
-		paintButton.setBounds(112, 185, 240, 100);
 		paintButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -71,12 +71,11 @@ public class homePage extends JFrame {
 				    }
 			}
 		});
-		panel1.setLayout(null);
 		paintButton.setFont(new Font("Verdana", Font.PLAIN, 15));
+		paintButton.setBounds(112, 185, 240, 100);
 		panel1.add(paintButton);
 		
 		JButton toDoButton = new JButton("To Do List");
-		toDoButton.setBounds(112, 83, 240, 100);
 		toDoButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				toDoList todo = new toDoList();
@@ -84,10 +83,10 @@ public class homePage extends JFrame {
 			}
 		});
 		toDoButton.setFont(new Font("Verdana", Font.PLAIN, 15));
+		toDoButton.setBounds(112, 83, 240, 100);
 		panel1.add(toDoButton);
 		
 		JButton notePadButton = new JButton("Notepad");
-		notePadButton.setBounds(354, 83, 240, 100);
 		notePadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -99,10 +98,10 @@ public class homePage extends JFrame {
 			}
 		});
 		notePadButton.setFont(new Font("Verdana", Font.PLAIN, 15));
+		notePadButton.setBounds(354, 83, 240, 100);
 		panel1.add(notePadButton);
 		
 		JButton calciButton = new JButton("Calculator");
-		calciButton.setBounds(354, 187, 240, 100);
 		calciButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -114,11 +113,17 @@ public class homePage extends JFrame {
 			}
 		});
 		calciButton.setFont(new Font("Verdana", Font.PLAIN, 15));
+		calciButton.setBounds(354, 187, 240, 100);
 		panel1.add(calciButton);
 		
 		JPanel panel2 = new JPanel();
 		tabbedPane.addTab("Assignment", null, panel2, null);
 		panel2.setLayout(null);
+		
+		JButton btnNewButton = new JButton("Back");
+		btnNewButton.setBounds(10, 10, 67, 25);
+		btnNewButton.setFont(new Font("Verdana", Font.BOLD, 13));
+		panel2.add(btnNewButton);
 		
 		JLabel lblNewLabel_1 = new JLabel("No Assignments as of now!!!");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -128,63 +133,22 @@ public class homePage extends JFrame {
 		
 		JPanel panel3 = new JPanel();
 		tabbedPane.addTab("Syllabus", null, panel3, null);
-		panel3.setLayout(null);
-		
-		JButton btnNewButton_1 = new JButton("English");
-		btnNewButton_1.setFont(new Font("Verdana", Font.PLAIN, 13));
-		btnNewButton_1.setBounds(281, 10, 200, 30);
-		panel3.add(btnNewButton_1);
-		
-		JButton btnNewButton_2 = new JButton("Marathi");
-		btnNewButton_2.setFont(new Font("Verdana", Font.PLAIN, 13));
-		btnNewButton_2.setBounds(281, 60, 200, 30);
-		panel3.add(btnNewButton_2);
-		
-		JButton btnNewButton_3 = new JButton("Sanskrit");
-		btnNewButton_3.setFont(new Font("Verdana", Font.PLAIN, 13));
-		btnNewButton_3.setBounds(281, 112, 200, 30);
-		panel3.add(btnNewButton_3);
-		
-		JButton btnNewButton_4 = new JButton("Maths");
-		btnNewButton_4.setFont(new Font("Verdana", Font.PLAIN, 13));
-		btnNewButton_4.setBounds(281, 164, 200, 30);
-		panel3.add(btnNewButton_4);
-		
-		JButton btnNewButton_5 = new JButton("Science");
-		btnNewButton_5.setFont(new Font("Verdana", Font.PLAIN, 13));
-		btnNewButton_5.setBounds(281, 214, 200, 30);
-		panel3.add(btnNewButton_5);
-		
-		JButton btnNewButton_6 = new JButton("History");
-		btnNewButton_6.setFont(new Font("Verdana", Font.PLAIN, 13));
-		btnNewButton_6.setBounds(281, 274, 200, 30);
-		panel3.add(btnNewButton_6);
-		
-		JButton btnNewButton_7 = new JButton("Geography");
-		btnNewButton_7.setFont(new Font("Verdana", Font.PLAIN, 13));
-		btnNewButton_7.setBounds(281, 325, 200, 30);
-		panel3.add(btnNewButton_7);
 		
 		JLabel lblNewLabel = new JLabel("Harshal Gondkar");
-		lblNewLabel.setBounds(550, 7, 122, 13);
 		lblNewLabel.setFont(new Font("Verdana", Font.PLAIN, 14));
+		lblNewLabel.setBounds(450, 7, 122, 13);
 		contentPane.add(lblNewLabel);
 		
-		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(200, 4, 200, 30);
-		contentPane.add(menuBar);
-		
 		JMenu mnNewMenu = new JMenu("Menu");
-		mnNewMenu.setBounds(200, 4, 200, 30);
+		mnNewMenu.setHorizontalAlignment(SwingConstants.CENTER);
+		mnNewMenu.setFont(new Font("Roboto Slab ExtraBold", Font.PLAIN, 14));
+		mnNewMenu.setBounds(600, 0, 100, 25);
 		contentPane.add(mnNewMenu);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Change Password");
+		JMenuItem mntmNewMenuItem = new JMenuItem("My Profile");
 		mnNewMenu.add(mntmNewMenuItem);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("My Profile");
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Change Password");
 		mnNewMenu.add(mntmNewMenuItem_1);
-		menuBar.setVisible(true);
-	setVisible(true);
-		
 	}
 }
