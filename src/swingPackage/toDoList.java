@@ -57,7 +57,7 @@ public class toDoList extends JFrame {
 		JButton btnNewButton = new JButton("Back");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				homePage home1 = new homePage();
+				homePageStudent home1 = new homePageStudent();
 				home1.setVisible(true);
 			}
 		});

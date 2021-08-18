@@ -130,6 +130,14 @@ public class addStudent extends JFrame {
 		textField_4.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Enter Data");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				homePagePrincipal hPP = new homePagePrincipal();
+				hPP.setVisible(true);
+				setVisible(false);
+			}
+			
+		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton.setBounds(87, 365, 127, 19);
 		contentPane.add(btnNewButton);

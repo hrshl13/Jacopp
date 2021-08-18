@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class addChapters extends JFrame {
 
@@ -59,6 +61,13 @@ public class addChapters extends JFrame {
 		textField.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Save");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				homePageTeacher hpT = new homePageTeacher();
+				hpT.setVisible(true);
+				setVisible(false);
+			}
+		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnNewButton.setBounds(24, 110, 85, 21);
 		contentPane.add(btnNewButton);

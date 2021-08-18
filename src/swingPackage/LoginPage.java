@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.GridLayout;
@@ -42,6 +44,7 @@ public class LoginPage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+
 	public LoginPage() {
 		setTitle("Login Page");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -79,19 +82,40 @@ public class LoginPage extends JFrame {
 		contentPane.add(useridTF);
 		useridTF.setColumns(10);
 		
+		passwordFieldLogin = new JPasswordField();
+		passwordFieldLogin.setBounds(313, 277, 96, 19);
+		contentPane.add(passwordFieldLogin);
+		
+		String inputUsername = useridTF.getText();
+		char[] inputPassword = passwordFieldLogin.getPassword();
+		
+		
 		JButton btnNewButton = new JButton("LOGIN");
 		btnNewButton.setFont(new Font("Verdana", Font.PLAIN, 12));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				homePage home = new homePage();
-				home.setVisible(true);
+				if(inputUsername=="Student1" && "Student1pwd".equals(new String(inputPassword))) {
+					homePageStudent home = new homePageStudent();
+					home.setVisible(true);
+					setVisible(false);
+				}
+				if(inputUsername=="Teacher1" && "Teacher1pwd".equals(new String(inputPassword))) {
+					homePageTeacher hpT = new homePageTeacher();
+					hpT.setVisible(true);
+					setVisible(false);;
+				}if(inputUsername=="Principal" && "Principalpwd".equals(new String(inputPassword))) {
+					homePagePrincipal hPP= new homePagePrincipal();
+					hPP.setVisible(true);
+					setVisible(false);
+				}
+				else {
+					JOptionPane.showMessageDialog(btnNewButton, "Enter correct User ID and Password","Error!!", JOptionPane.WARNING_MESSAGE);		
+				}
+				
 			}
 		});
 		btnNewButton.setBounds(306, 326, 85, 21);
 		contentPane.add(btnNewButton);
 		
-		passwordFieldLogin = new JPasswordField();
-		passwordFieldLogin.setBounds(313, 277, 96, 19);
-		contentPane.add(passwordFieldLogin);
 	}
 }
