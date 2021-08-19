@@ -66,26 +66,29 @@ public class addFaculty extends JFrame {
 	 * Create the frame.
 	 */
 	public addFaculty() {
-		
-		
+		colorsFile cF = new colorsFile();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 740, 445);
 		contentPane = new JPanel();
+		contentPane.setBackground(cF.bg);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("New Faculty");
+		lblNewLabel.setForeground(cF.lbClr);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel.setBounds(279, 0, 165, 42);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("First Name: ");
+		lblNewLabel_1.setForeground(cF.lbClr);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_1.setBounds(39, 63, 109, 13);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Last Name:");
+		lblNewLabel_2.setForeground(cF.lbClr);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_2.setBounds(39, 86, 109, 13);
 		contentPane.add(lblNewLabel_2);
@@ -101,6 +104,7 @@ public class addFaculty extends JFrame {
 		textField_1.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("Date of Birth:");
+		lblNewLabel_3.setForeground(cF.lbClr);
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_3.setBounds(39, 123, 109, 13);
 		contentPane.add(lblNewLabel_3);
@@ -111,6 +115,7 @@ public class addFaculty extends JFrame {
 		textField_2.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Gender:");
+		lblNewLabel_4.setForeground(cF.lbClr);
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_4.setBounds(39, 171, 109, 13);
 		contentPane.add(lblNewLabel_4);
@@ -132,6 +137,7 @@ public class addFaculty extends JFrame {
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
 		JLabel lblNewLabel_5 = new JLabel("Phone Number: ");
+		lblNewLabel_5.setForeground(cF.lbClr);
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_5.setBounds(39, 212, 109, 13);
 		contentPane.add(lblNewLabel_5);
@@ -142,6 +148,7 @@ public class addFaculty extends JFrame {
 		textField_3.setColumns(10);
 		
 		JLabel lblNewLabel_6 = new JLabel("Address:");
+		lblNewLabel_6.setForeground(cF.lbClr);
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_6.setBounds(39, 261, 109, 13);
 		contentPane.add(lblNewLabel_6);
@@ -151,6 +158,7 @@ public class addFaculty extends JFrame {
 		contentPane.add(textArea);
 		
 		JLabel lblNewLabel_7 = new JLabel("Email ID: ");
+		lblNewLabel_7.setForeground(cF.lbClr);
 		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_7.setBounds(39, 311, 109, 13);
 		contentPane.add(lblNewLabel_7);
@@ -161,6 +169,7 @@ public class addFaculty extends JFrame {
 		textField_4.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Enter Data");
+		btnNewButton.setBackground(cF.btnClr1);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				homePagePrincipal hPP = new homePagePrincipal();
@@ -200,6 +209,7 @@ public class addFaculty extends JFrame {
 		mnNewMenu_1.add(mntmNewMenuItem_12);
 		
 		JLabel lblNewLabel_8 = new JLabel("Subject:");
+		lblNewLabel_8.setForeground(cF.lbClr);
 		lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel_8.setBounds(458, 104, 73, 13);
 		contentPane.add(lblNewLabel_8);

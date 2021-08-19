@@ -13,6 +13,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class changeSyllabusHOD extends JFrame {
 
@@ -38,9 +39,12 @@ public class changeSyllabusHOD extends JFrame {
 	 * Create the frame.
 	 */
 	public changeSyllabusHOD() {
+		colorsFile cF = new colorsFile(); 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Change Syllabus");
 		setBounds(100, 100, 740, 445);
 		contentPane = new JPanel();
+		contentPane.setBackground(cF.bg);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -71,41 +75,49 @@ public class changeSyllabusHOD extends JFrame {
 		mnNewMenu.add(mntmNewMenuItem_5);
 		
 		JLabel lblNewLabel_1 = new JLabel("Select Standard");
+		lblNewLabel_1.setForeground(cF.lbClr);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel_1.setBounds(23, 10, 133, 27);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblSubject = new JLabel("Subject");
+		lblSubject.setForeground(cF.lbClr);
 		lblSubject.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblSubject.setBounds(23, 89, 84, 20);
 		contentPane.add(lblSubject);
 		
 		JButton btnNewButton = new JButton("Delete");
+		btnNewButton.setBackground(cF.btnClr1);
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnNewButton.setBounds(344, 122, 85, 21);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel_2 = new JLabel("English");
+		lblNewLabel_2.setForeground(cF.lbClr);
 		lblNewLabel_2.setFont(new Font("Verdana", Font.PLAIN, 11));
 		lblNewLabel_2.setBounds(34, 119, 76, 22);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton_1 = new JButton("Delete");
+		btnNewButton_1.setBackground(cF.btnClr1);
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		btnNewButton_1.setBounds(344, 154, 85, 21);
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Marathi");
+		lblNewLabel_2_1.setForeground(cF.lbClr);
 		lblNewLabel_2_1.setFont(new Font("Verdana", Font.PLAIN, 11));
 		lblNewLabel_2_1.setBounds(34, 153, 76, 22);
 		contentPane.add(lblNewLabel_2_1);
 		
 		JButton btnNewButton_8 = new JButton("Edit Syllabus");
+		btnNewButton_8.setBackground(cF.btnClr1);
 		btnNewButton_8.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton_8.setBounds(390, 10, 147, 27);
 		contentPane.add(btnNewButton_8);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Select Subjects");
+		lblNewLabel_1_1.setForeground(cF.lbClr);
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel_1_1.setBounds(24, 47, 133, 27);
 		contentPane.add(lblNewLabel_1_1);
@@ -139,21 +151,25 @@ public class changeSyllabusHOD extends JFrame {
 		mnNewMenu_1.add(mntmNewMenuItem_12);
 		
 		JLabel lblChapter = new JLabel("Chapter");
+		lblChapter.setForeground(cF.lbClr);
 		lblChapter.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblChapter.setBounds(181, 89, 84, 20);
 		contentPane.add(lblChapter);
 		
 		JLabel lblNewLabel_2_2 = new JLabel("Prepositions");
+		lblNewLabel_2_2.setForeground(cF.lbClr);
 		lblNewLabel_2_2.setFont(new Font("Verdana", Font.PLAIN, 11));
 		lblNewLabel_2_2.setBounds(192, 119, 76, 22);
 		contentPane.add(lblNewLabel_2_2);
 		
 		JLabel lblNewLabel_2_1_1 = new JLabel("Nibandh");
+		lblNewLabel_2_1_1.setForeground(cF.lbClr);
 		lblNewLabel_2_1_1.setFont(new Font("Verdana", Font.PLAIN, 11));
 		lblNewLabel_2_1_1.setBounds(192, 153, 76, 22);
 		contentPane.add(lblNewLabel_2_1_1);
 		
 		JButton btnNewButton_8_1 = new JButton("Add Chapter");
+		btnNewButton_8_1.setBackground(cF.lbClr);
 		btnNewButton_8_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton_8_1.setBounds(547, 10, 147, 27);
 		contentPane.add(btnNewButton_8_1);

@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class addChapters extends JFrame {
 
@@ -38,19 +39,23 @@ public class addChapters extends JFrame {
 	 * Create the frame.
 	 */
 	public addChapters() {
+		colorsFile cF = new colorsFile();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 395, 254);
 		contentPane = new JPanel();
+		contentPane.setBackground(cF.bg);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Add Chapters");
+		lblNewLabel.setForeground(cF.lbClr);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel.setBounds(132, 10, 112, 38);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Add chapter : ");
+		lblNewLabel_1.setForeground(cF.lbClr);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		lblNewLabel_1.setBounds(24, 63, 103, 26);
 		contentPane.add(lblNewLabel_1);
@@ -61,6 +66,7 @@ public class addChapters extends JFrame {
 		textField.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Save");
+		btnNewButton.setBackground(cF.btnClr1);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				homePageTeacher hpT = new homePageTeacher();
