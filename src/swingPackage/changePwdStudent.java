@@ -30,8 +30,7 @@ public class changePwdStudent extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					changePwdStudent frame = new changePwdStudent();
-					frame.setVisible(true);
+					new changePwdStudent();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

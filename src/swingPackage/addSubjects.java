@@ -26,8 +26,7 @@ public class addSubjects extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					addSubjects frame = new addSubjects();
-					frame.setVisible(true);
+					new addSubjects();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -40,6 +39,7 @@ public class addSubjects extends JFrame {
 	 */
 	public addSubjects() {
 		colorsFile cF = new colorsFile();
+		setTitle("Add New Subject");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 395, 254);
 		contentPane = new JPanel();

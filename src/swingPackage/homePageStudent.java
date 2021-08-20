@@ -93,6 +93,7 @@ public class homePageStudent extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					toDoList todo = new toDoList();
 					todo.setVisible(true);
+					setVisible(false);
 				}
 			});
 			toDoButton.setFont(new Font("Verdana", Font.PLAIN, 15));
@@ -181,13 +182,13 @@ public class homePageStudent extends JFrame {
 			JButton btnNewButton_6 = new JButton("History");
 			btnNewButton_6.setBackground(cF.btnClr1);
 			btnNewButton_6.setFont(new Font("Verdana", Font.PLAIN, 13));
-			btnNewButton_6.setBounds(281, 274, 200, 30);
+			btnNewButton_6.setBounds(281, 270, 200, 30);
 			syllabusStudent.add(btnNewButton_6);
 			
 			JButton btnNewButton_7 = new JButton("Geography");
 			btnNewButton_7.setBackground(cF.btnClr1);
 			btnNewButton_7.setFont(new Font("Verdana", Font.PLAIN, 13));
-			btnNewButton_7.setBounds(281, 325, 200, 30);
+			btnNewButton_7.setBounds(281, 323, 200, 30);
 			syllabusStudent.add(btnNewButton_7);
 		
 		JLabel lblNewLabel = new JLabel("Student1");
@@ -225,6 +226,16 @@ public class homePageStudent extends JFrame {
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem_1);
+		
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Log Out");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LoginPage lP = new LoginPage();
+				lP.setVisible(true);
+				setVisible(false);
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_2);
 		menuBar.setVisible(true);
 	setVisible(true);
 		

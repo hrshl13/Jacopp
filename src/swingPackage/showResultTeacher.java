@@ -28,8 +28,7 @@ public class showResultTeacher extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					showResultTeacher frame = new showResultTeacher();
-					frame.setVisible(true);
+					new showResultTeacher();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -42,6 +41,7 @@ public class showResultTeacher extends JFrame {
 	 */
 	public showResultTeacher() {
 		colorsFile cF = new colorsFile();
+		setTitle("Results for Assignment");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 740, 445);
 		contentPane = new JPanel();

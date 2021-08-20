@@ -26,8 +26,7 @@ public class changeSyllabusHOD extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					changeSyllabusHOD frame = new changeSyllabusHOD();
-					frame.setVisible(true);
+					new changeSyllabusHOD();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

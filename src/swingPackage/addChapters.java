@@ -26,8 +26,7 @@ public class addChapters extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					addChapters frame = new addChapters();
-					frame.setVisible(true);
+					 new addChapters();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -40,6 +39,7 @@ public class addChapters extends JFrame {
 	 */
 	public addChapters() {
 		colorsFile cF = new colorsFile();
+		setTitle("Add New Chapter");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 395, 254);
 		contentPane = new JPanel();

@@ -283,7 +283,7 @@ public class homePageTeacher extends JFrame {
 			panel_3.setLayout(null);
 			
 			JMenuBar menuBar_2 = new JMenuBar();
-			menuBar_2.setBounds(154, 15, 101, 22);
+			menuBar_2.setBounds(154, 15, 60, 22);
 			panel_3.add(menuBar_2);
 			
 			JMenu mnNewMenu_2 = new JMenu("Standards");
@@ -377,7 +377,7 @@ public class homePageTeacher extends JFrame {
 			panel_3.add(lblNewLabel_1_1_2);
 			
 			JMenuBar menuBar_1_1 = new JMenuBar();
-			menuBar_1_1.setBounds(154, 47, 101, 22);
+			menuBar_1_1.setBounds(154, 47, 60, 22);
 			panel_3.add(menuBar_1_1);
 			
 			JMenu mnNewMenu_1_1 = new JMenu("Subjects");
@@ -468,6 +468,16 @@ public class homePageTeacher extends JFrame {
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem_1);
+		
+		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Log Out");
+		mntmNewMenuItem_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LoginPage lP = new LoginPage();
+				lP.setVisible(true);
+				setVisible(false);
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_13);
 		menuBar.setVisible(true);
 	setVisible(true);
 		

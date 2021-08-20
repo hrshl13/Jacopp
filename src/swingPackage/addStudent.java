@@ -23,8 +23,7 @@ public class addStudent extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					addStudent frame = new addStudent();
-					frame.setVisible(true);
+					new addStudent();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -37,6 +36,7 @@ public class addStudent extends JFrame {
 	 */
 	public addStudent() {
 		colorsFile cF = new colorsFile();
+		setTitle("Add New Student");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 740, 445);
 		contentPane = new JPanel();

@@ -24,8 +24,7 @@ public class myProfileStudent extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					myProfileStudent frame = new myProfileStudent();
-					frame.setVisible(true);
+					new myProfileStudent();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -38,6 +37,7 @@ public class myProfileStudent extends JFrame {
 	 */
 	public myProfileStudent() {
 		colorsFile cF = new colorsFile();
+		setTitle("My Profile-Student1");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 740, 445);
 		contentPane = new JPanel();
@@ -82,6 +82,7 @@ public class myProfileStudent extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				homePageStudent h = new homePageStudent();
 				h.setVisible(true);
+				setVisible(false);
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));

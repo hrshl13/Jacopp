@@ -24,8 +24,7 @@ public class toDoList extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					toDoList frame = new toDoList();
-					frame.setVisible(true);
+				new toDoList();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -67,6 +66,7 @@ public class toDoList extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				homePageStudent home1 = new homePageStudent();
 				home1.setVisible(true);
+				setVisible(false);
 			}
 		});
 		btnNewButton.setFont(new Font("Verdana", Font.PLAIN, 13));

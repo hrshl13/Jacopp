@@ -37,6 +37,7 @@ public class myProfilePrincipal extends JFrame {
 	 */
 	public myProfilePrincipal() {
 		colorsFile cF = new colorsFile();
+		setTitle("My Profile-Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 740, 445);
 		contentPane = new JPanel();
@@ -80,7 +81,7 @@ public class myProfilePrincipal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				homePagePrincipal hpP = new homePagePrincipal();
 				hpP.setVisible(true);
-			setVisible(false);
+				setVisible(false);
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));

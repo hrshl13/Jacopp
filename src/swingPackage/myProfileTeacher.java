@@ -24,8 +24,7 @@ public class myProfileTeacher extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					myProfileTeacher frame = new myProfileTeacher();
-					frame.setVisible(true);
+					new myProfileTeacher();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -38,6 +37,7 @@ public class myProfileTeacher extends JFrame {
 	 */
 	public myProfileTeacher() {
 		colorsFile cF = new colorsFile();
+		setTitle("My Profile-Teacher1");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 740, 445);
 		contentPane = new JPanel();

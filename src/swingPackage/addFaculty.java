@@ -53,8 +53,7 @@ public class addFaculty extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					addFaculty frame = new addFaculty();
-					frame.setVisible(true);
+					new addFaculty();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -67,6 +66,7 @@ public class addFaculty extends JFrame {
 	 */
 	public addFaculty() {
 		colorsFile cF = new colorsFile();
+		setTitle("Add New Faculty");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 740, 445);
 		contentPane = new JPanel();
